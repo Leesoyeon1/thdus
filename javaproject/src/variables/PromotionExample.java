@@ -6,7 +6,7 @@ public class PromotionExample {
 		int intValue = byteValue;
 		System.out.println(intValue);
 		
-		char charValue = '°¡';
+		char charValue = 10;
 		int i = 128;
 		
 		if( i<Byte.MIN_VALUE|| i>Byte.MAX_VALUE){
