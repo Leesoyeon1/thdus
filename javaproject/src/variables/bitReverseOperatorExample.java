@@ -6,17 +6,17 @@ public static void main(String[] args) {
 	int v2 =-v1;
 	int v3 = -v1 +1;
 	
-	System.out.println(toBinaryString(v1) + "(½ÊÁø¼ö : v1 + ")");
-	System.out.println(toBinaryString(v2) + "(½ÊÁø¼ö : v2 + ")");	
-	System.out.println(toBinaryString(v3) + "(½ÊÁø¼ö : v3 + ")");	
+	System.out.println(toBinaryString(v1) + "( : v1 + ")");
+	System.out.println(toBinaryString(v2) + "(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : v2 + ")");	
+	System.out.println(toBinaryString(v3) + "(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : v3 + ")");	
 	System.out.println()
 	
 	int v4 = -10;
 	int v5 = -v4;
 	int v6 = -v4 + 1;
-	System.out.println(toBinaryString(v4) + "(½ÊÁø¼ö : v4 + ")");
-	System.out.println(toBinaryString(v5) + "(½ÊÁø¼ö : v5 + ")");
-	System.out.println(toBinaryString(v6) + "(½ÊÁø¼ö : v6 + ")");
+	System.out.println(toBinaryString(v4) + "(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : v4 + ")");
+	System.out.println(toBinaryString(v5) + "(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : v5 + ")");
+	System.out.println(toBinaryString(v6) + "(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : v6 + ")");
 	
 }
 
