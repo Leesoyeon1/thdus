@@ -6,45 +6,114 @@ public class Homework {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		int[][] students = null;
-		int studentNum = 0;// ÇĞ»ı¹øÈ£
-		int studentCount = 0;// ÇĞ»ı¼ö
+		int studentNum = 0;// í•™ìƒë²ˆí˜¸
+		int studentCount = 0;// í•™ìƒìˆ˜
 
 		while (true) {
 			System.out.println("------------------------------------------------------------------");
-			System.out.println("1.ÇĞ»ı¼ö 2.Á¡¼öÀÔ·Â 3.¸®½ºÆ® 4.Á¶È¸ 5.¿µ¾îÃÖ°íÁ¡ 6.ÇÕ°èÃÖ°í 7.¼öÇĞÆò±ÕÀÌ»ó 9.Á¾·á");
+			System.out.println("1.í•™ìƒìˆ˜ 2.ì ìˆ˜ì…ë ¥ 3.ë¦¬ìŠ¤íŠ¸ 4.ì¡°íšŒ 5.ì˜ì–´ìµœê³ ì  6.í•©ê³„ìµœê³  7.ìˆ˜í•™í‰ê· ì´ìƒ 9.ì¢…ë£Œ");
 			System.out.println("------------------------------------------------------------------");
-			System.out.println("¼±ÅÃ >");
+			System.out.println("ì„ íƒ >");
 			int menu = scn.nextInt();
-			if (menu != 1 && students == null) {
-				System.out.println("ÀÌ¹Ì ÀÔ·ÂÇß½À´Ï´Ù.");
-				System.out.println();
-				continue;
-			}
 
 			if (menu == 1) {
-				System.out.print("ÇĞ»ı¼ö> ");
-				studentCount = scn.nextInt();
-				students = new int[studentCount][];
+				if (studentCount != 0) {
+					System.out.println("ì´ë¯¸ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 
-			} else if (menu == 2) {
+					continue;
+				}
+				System.out.print("í•™ìƒìˆ˜> ");
+				studentCount = scn.nextInt();
+				students = new int[studentCount][3];
+
+			}
+
+			if (menu == 2) {
 				for (int i = 0; i < students.length; i++) {
-					System.out.println("ÇĞ»ı¹øÈ£> ");
-					
-					System.out.println("¿µ¾îÁ¡¼ö> ");
+					System.out.println("í•™ìƒë²ˆí˜¸> ");
+					students[i][0] = scn.nextInt();
+					System.out.println("ì˜ì–´ì ìˆ˜> ");
 					students[i][1] = scn.nextInt();
-					System.out.println("¼öÇĞÁ¡¼ö> ");
+					System.out.println("ìˆ˜í•™ì ìˆ˜> ");
 					students[i][2] = scn.nextInt();
 
 				}
 			} else if (menu == 3) {
 				for (int i = 0; i < students.length; i++) {
-					System.out.println("ÇĞ»ı¹øÈ£>"+students[i]);
-					studentNum = scn.nextInt();
+					System.out.println("í•™ìƒë²ˆí˜¸>" + students[i][0]);
+					System.out.println("ì˜ì–´ì ìˆ˜ :" + students[i][1]);
+					System.out.println("ìˆ˜í•™ì ìˆ˜:" + students[i][2]);
 
 				}
+			} else if (menu == 4) {
+
+				System.out.println("í•™ìƒë²ˆí˜¸>");
+				int ans = scn.nextInt();
+
+				for (int i = 0; i < students.length; i++) {
+					if (students[i][0] == ans) {
+						System.out.println("ì˜ì–´ì ìˆ˜ :" + students[i][1]);
+						System.out.println("ìˆ˜í•™ì ìˆ˜:" + students[i][2]);
+						System.out.println("í•©ê³„ :" + (students[i][1] + students[i][2]));
+						System.out.println("í‰ê·  :" + (students[i][1] + students[i][2]) / 2.0);
+					}
+
+				}
+			} else if (menu == 5) {
+
+				int maxValue = 0;
+				int engTop = 0;
+				for (int i = 0; i < students.length; i++) {
+
+					if (students[i][1] > maxValue) {
+						maxValue = students[i][1];
+						engTop=i;
+						
+
+					}
+					
+				}System.out.println("ì˜ì–´ìµœê³ ì >" + maxValue + "í•™ìƒë²ˆí˜¸: " + students[engTop][0]);
+				
+			} else if (menu == 6) {
+				int sumMax = 0;
+				int sum = 0;
+				int top = 0;
+
+				for (int i = 0; i < students.length; i++) {
+					sum += (students[i][1] + students[i][2]);
+
+					if (sum > sumMax) {
+						sumMax = (sum);
+						top = i;
+					}
+					sum = 0;
+
+				}
+				System.out.println("í•©ê³„ìµœê³ ì ìˆ˜ í•™ìƒ: " + students[top][0] + "í‰ê· ì ìˆ˜ :" + sumMax / 2.0);
+
+			} else if (menu == 7) {
+
+				double mathAvg;
+				int mathSum = 0;
+
+				for (int i = 0; i < students.length; i++) {
+					mathSum = mathSum + students[i][2];
+				}
+				mathAvg = (double) mathSum / students.length;
+				System.out.println("ìˆ˜í•™ì˜ í‰ê· :" + mathAvg);
+				for (int i = 0; i < students.length; i++)
+					if (mathAvg < students[i][2]) {
+						System.out.println("ìˆ˜í•™ í‰ê·  ì´ìƒì¸ í•™ìƒ>" + students[i][0] + "ìˆ˜í•™ì ìˆ˜: " + students[i][2]);
+
+					}
+			} else if (menu == 9) {
+				break;
+
 			}
 
 		}
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 
 	}
+
 }
