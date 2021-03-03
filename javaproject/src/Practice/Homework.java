@@ -20,6 +20,7 @@ public class Homework {
 				if (studentCount != 0) {
 					System.out.println("이미 입력했습니다.");
 
+					
 					continue;
 				}
 				System.out.print("학생수> ");
@@ -72,7 +73,10 @@ public class Homework {
 
 					}
 					
-				}System.out.println("영어최고점>" + maxValue + "학생번호: " + students[engTop][0]);
+				}
+				
+				System.out.println("영어최고점>" + maxValue + "학생번호: " + students[engTop][0]);
+				
 				
 			} else if (menu == 6) {
 				int sumMax = 0;

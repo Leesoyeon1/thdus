@@ -17,6 +17,38 @@ public class Scores {
 		
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getEng() {
+		return eng;
+	}
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
+	public int getMath() {
+		return math;
+	}
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+	public int getSum() {
+		return sum;
+	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+
 	Scores() {
 
 	}
@@ -25,30 +57,7 @@ public class Scores {
 			System.out.println("이름은 "+ this.name + "영어점수는 " + this.eng + "수학점수는 "+ this.math + "합계는 " +this.sum);
 
 	}
-public void setName(String name) {
-	this.name = name;
-	
-}
-public void setEng(int eng) {
-	this.eng = eng;
-	
-}
-public void setMath(int math) {
-	this.math = math;
-	
-}
-public void setName(String name) {
-	return this.name;
-	
-}
-public void setEng(int eng) {
-	return this.eng;
-	
-}
-public void setMath(int math) {
-	return this.math;
-	
-}
+
 	// TODO Auto-generated constructor stub
 }
 //학생의 이름,영어,수학점수를 저장
