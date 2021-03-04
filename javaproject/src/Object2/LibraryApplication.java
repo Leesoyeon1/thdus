@@ -47,7 +47,7 @@ public class LibraryApplication {
 				for(int i =0; i < bookList.length; i++) {
 				System.out.println("도서대여 가능 목록" + bookList[i].getName());//return값을 가져옴
 				
-				
+				//
 				
 				}
 				
