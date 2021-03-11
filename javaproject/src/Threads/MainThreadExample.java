@@ -8,7 +8,7 @@ public class MainThreadExample {
 		Calculator claculator = new Calculator();
 		
 		User1 user1 = new User1();
-		user1.setCalculator(claculator);
+		user1.setcalculator(claculator);
 		user1.start();
 		
 		User2 user2 = new User2();
