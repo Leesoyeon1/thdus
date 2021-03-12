@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import inheritances.Employee;
 
@@ -50,6 +51,11 @@ public class EmpDAO {
 		System.out.println("메소드 호출 완료.");
 		return employees;
 
+	}
+
+	public List<Employee> getEmpList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
