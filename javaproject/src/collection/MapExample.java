@@ -16,7 +16,7 @@ public class MapExample {
 		Set<String> set = map.keySet();
 		for(String key : set) {
 			Integer cal = map.get(key);
-			System.out.println("key: "+ key+ ", val : "+ val);
+			System.out.println("key: "+ key+ ", cal : "+ cal);
 		}
 //		Iterator<String> iter = set.iterator();
 //		while (iter.hasNext()) {
