@@ -3,10 +3,10 @@ package Object;
 public class Student {
 	
 			   // 속성(필드)-값을 담음
-			   String studentNo; //p21010101
-			   int grade;
-			   int math;
-			   int eng;
+			   private String studentNo; //p21010101
+			   private int grade;
+			   private int math;
+			   private int eng;
 			   
 			   //생성자:필드값을 초기화
 			   
