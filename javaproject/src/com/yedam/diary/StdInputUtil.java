@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class StdInputUtil {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +33,10 @@ public class StdInputUtil {
 		do {
 			try {
 				result = br.readLine();
-				df.parse(result.trim());
+				result = result.trim();
+				Date w = df.parse(result);
+				System.out.println(df.format(w));
+				
 				break;
 			} catch (Exception e) {
 //				e.printStackTrace();
@@ -59,5 +63,26 @@ public class StdInputUtil {
 		return result.toString();
 
 	}
+
+
+	public static String readContent() {
+		String result = "";
+
+		do {
+			try {
+				result = br.readLine();
+				result = result.trim();
+				Date w = df.parse(result);
+				System.out.println(result);
+				result = df.format(w);
+				break;
+			} catch (Exception e) {
+//				e.printStackTrace();
+				System.out.println("다시 입력");
+			}
+		} while (true);
+		return result;
+	}
+	
 
 }

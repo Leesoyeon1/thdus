@@ -8,6 +8,14 @@ public class DiaryVO implements Serializable{
 	private String cotents;
 	
 	
+	public DiaryVO(String wdate, String cotents) {
+		this.wdate = wdate;
+		this.cotents = cotents;
+	}
+	public DiaryVO() {
+		
+	}
+	
 	public String getWdate() {
 		return wdate;
 	}
